@@ -1,0 +1,18 @@
+<div *ngIf="childSelectedMeal">
+  <form class="form-inline">
+  <h2>Edit Meal:</h2>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input [(ngModel)]="childSelectedMeal.name" [ngModelOptions]="{standalone: true}"  placeholder="Meal Name Goes Here">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input [(ngModel)]="childSelectedMeal.description" [ngModelOptions]="{standalone: true}" placeholder="Meal Details Go Here" >
+    </div>
+    <div class="form-group">
+      <label for="calories">No of Calories:</label>
+      <input [(ngModel)]="childSelectedMeal.calories" [ngModelOptions]="{standalone: true}" placeholder="Calories Go Here">
+    </div>
+    <button (click)="doneClicked()">Finish Editing</button>
+  </form>
+</div>

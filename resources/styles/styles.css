@@ -1,0 +1,18 @@
+.center{
+  color: blue;
+  text-align: center;
+}
+.aside {
+    float: left;
+    max-width: 250px;
+    margin: 0;
+    padding: 1em;
+    background-color: #75c48c;
+    width: 100%;
+
+}
+.content {
+    margin-left: 170px;
+    padding: 1em;
+    overflow: hidden;
+}

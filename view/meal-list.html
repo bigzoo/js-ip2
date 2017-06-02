@@ -1,0 +1,28 @@
+<h3 class="center">Here's what I already know of</h3>
+<!-- <select (change)="onChange($event.target.value)" class="filter">
+  <option value="all">All</option>
+  <option value="isDone">Complete</option>
+  <option value="notDone" selected="selected">Incomplete</option>
+</select> -->
+
+
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th>Meal Name</th>
+    <th>About It</th>
+    <th>Its Calories</th>
+    <th>Edit?</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let currentMeal of childMealList">
+    <td>{{currentMeal.name}}</td>
+    <td>{{currentMeal.description}}</td>
+    <td>{{currentMeal.calories}}</td>
+    <td><button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button></td>
+
+<!-- <meal-display [meal]="currentMeal"></meal-display> -->
+</tr>
+</tbody>
+</table>

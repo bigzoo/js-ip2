@@ -1,0 +1,8 @@
+<h2 class="center">Hello there, I am Cateress.</h2>
+<div class="container">
+<meal-list class="content"
+    [childMealList]="masterMealList"
+    (clickSender)="showDetails($event)"></meal-list>
+</div>
+<new-meal class="aside" (newMealSender)="addMeal($event)"></new-meal>
+<edit-meal [childSelectedMeal]="selectedMeal" (doneClickedSender)="finishedEditing()"></edit-meal>
