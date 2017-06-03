@@ -13,9 +13,8 @@ export class MealListComponent{
     console.log(mealToEdit);
     this.clickSender.emit(mealToEdit);
   }
-  public selectedCompleteness:string ="notDone";
+  public selectedCalorieness:string ="all";
   onChange(optionFromMenu){
-    this.selectedCompleteness = optionFromMenu;
-    //console.log(this.selectedCompleteness);
+    this.selectedCalorieness = optionFromMenu;
   }
 }

@@ -1,6 +1,4 @@
 <h3>Enter New Meal</h3>
-
-
   <form class="form-inline">
     <div class="form-group">
       <label for="name">Name</label>
@@ -12,7 +10,7 @@
     </div>
     <div class="form-group">
       <label for="calories">No of Calories:</label>
-      <input type="text" class="form-control" #newCalories placeholder="Calories Go Here">
+      <input type="number" class="form-control" #newCalories placeholder="Calories Go Here">
     </div>
     <button (click)="addClicked(newName.value, newDescription.value,newCalories.value);
                       newName.value='';newDescription.value='';newCalories.value=''" class="btn btn-default">ADD</button>

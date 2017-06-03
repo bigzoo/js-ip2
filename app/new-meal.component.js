@@ -17,7 +17,6 @@ var NewMealComponent = (function () {
     NewMealComponent.prototype.addClicked = function (name, description, calories) {
         var newMealToAdd = new meal_model_1.Meal(name, description, calories);
         this.newMealSender.emit(newMealToAdd);
-        //console.log(newMealToAdd);
     };
     __decorate([
         core_1.Output(), 
@@ -26,7 +25,7 @@ var NewMealComponent = (function () {
     NewMealComponent = __decorate([
         core_1.Component({
             selector: 'new-meal',
-            templateUrl: 'view/new-meal.html'
+            templateUrl: 'view/new-meal.html',
         }), 
         __metadata('design:paramtypes', [])
     ], NewMealComponent);

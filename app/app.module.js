@@ -16,6 +16,7 @@ var meal_list_component_1 = require('./meal-list.component');
 var meal_component_1 = require('./meal.component');
 var new_meal_component_1 = require('./new-meal.component');
 var edit_meal_component_1 = require('./edit-meal.component');
+var calorieness_pipe_1 = require('./calorieness.pipe');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ var AppModule = (function () {
                 meal_component_1.MealComponent,
                 meal_list_component_1.MealListComponent,
                 new_meal_component_1.NewMealComponent,
-                edit_meal_component_1.EditMealComponent],
+                edit_meal_component_1.EditMealComponent,
+                calorieness_pipe_1.CalorienessPipe],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

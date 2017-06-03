@@ -12,15 +12,14 @@ var core_1 = require('@angular/core');
 var MealListComponent = (function () {
     function MealListComponent() {
         this.clickSender = new core_1.EventEmitter();
-        this.selectedCompleteness = "notDone";
+        this.selectedCalorieness = "all";
     }
     MealListComponent.prototype.editButtonHasBeenClicked = function (mealToEdit) {
         console.log(mealToEdit);
         this.clickSender.emit(mealToEdit);
     };
     MealListComponent.prototype.onChange = function (optionFromMenu) {
-        this.selectedCompleteness = optionFromMenu;
-        //console.log(this.selectedCompleteness);
+        this.selectedCalorieness = optionFromMenu;
     };
     __decorate([
         core_1.Input(), 
