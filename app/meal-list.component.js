@@ -18,14 +18,19 @@ var MealListComponent = (function () {
         console.log(mealToEdit);
         this.clickSender.emit(mealToEdit);
     };
-    MealListComponent.prototype.getTotal = function (calories) {
-        console.log(calories);
+    MealListComponent.prototype.getTotal = function () {
         var total = 0;
         for (var i = 0; i < this.childMealList.length; i++) {
             var currentCalorie = this.childMealList[i].calories;
             total += currentCalorie;
         }
         return total;
+    };
+    MealListComponent.prototype.getAverage = function () {
+        var average = 0;
+        var total = this.getTotal();
+        average = total / this.childMealList.length;
+        return average;
     };
     MealListComponent.prototype.onChange = function (optionFromMenu) {
         this.selectedCalorieness = optionFromMenu;

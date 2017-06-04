@@ -13,14 +13,19 @@ export class MealListComponent{
     console.log(mealToEdit);
     this.clickSender.emit(mealToEdit);
   }
-  getTotal(calories:number){
-    console.log(calories);
+  getTotal(){
     var total:number=0;
     for (var i =0;i<this.childMealList.length;i++){
       var currentCalorie:number = this.childMealList[i].calories;
       total +=currentCalorie;
     }
     return total;
+  }
+  getAverage(){
+    var average:number=0;
+    var total = this.getTotal();
+    average=total/this.childMealList.length;
+    return average;
   }
   public selectedCalorieness:string ="all";
   onChange(optionFromMenu){
