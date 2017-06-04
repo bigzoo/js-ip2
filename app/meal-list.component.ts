@@ -13,8 +13,18 @@ export class MealListComponent{
     console.log(mealToEdit);
     this.clickSender.emit(mealToEdit);
   }
+  getTotal(calories:number){
+    console.log(calories);
+    var total:number=0;
+    for (var i =0;i<this.childMealList.length;i++){
+      var currentCalorie:number = this.childMealList[i].calories;
+      total +=currentCalorie;
+    }
+    return total;
+  }
   public selectedCalorieness:string ="all";
   onChange(optionFromMenu){
     this.selectedCalorieness = optionFromMenu;
   }
+
 }

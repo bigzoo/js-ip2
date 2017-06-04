@@ -9,9 +9,10 @@ import { Meal } from './meal.model';
 export class AppComponent {
   public masterMealList: Meal[] =
   [
-   new Meal('Githeri','Beans were more than maize',10000),
+   new Meal('Githeri','Beans were more than maize',400),
    new Meal('Chipsi','Ni kitamu vilivyo',10000),
-   new Meal('Uganga','Unga ilikuwa na weevils',910000)];
+   new Meal('Uganga','Unga ilikuwa na weevils',200),
+   new Meal('Bhajia','Too much sauce',1500)];
   selectedMeal: Meal = null;
   showDetails(clickedMeal:Meal) {
     this.selectedMeal = clickedMeal;

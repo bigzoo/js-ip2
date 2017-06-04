@@ -13,9 +13,10 @@ var meal_model_1 = require('./meal.model');
 var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
-            new meal_model_1.Meal('Githeri', 'Beans were more than maize', 10000),
+            new meal_model_1.Meal('Githeri', 'Beans were more than maize', 400),
             new meal_model_1.Meal('Chipsi', 'Ni kitamu vilivyo', 10000),
-            new meal_model_1.Meal('Uganga', 'Unga ilikuwa na weevils', 910000)];
+            new meal_model_1.Meal('Uganga', 'Unga ilikuwa na weevils', 200),
+            new meal_model_1.Meal('Bhajia', 'Too much sauce', 1500)];
         this.selectedMeal = null;
     }
     AppComponent.prototype.showDetails = function (clickedMeal) {

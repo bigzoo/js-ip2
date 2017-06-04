@@ -18,6 +18,15 @@ var MealListComponent = (function () {
         console.log(mealToEdit);
         this.clickSender.emit(mealToEdit);
     };
+    MealListComponent.prototype.getTotal = function (calories) {
+        console.log(calories);
+        var total = 0;
+        for (var i = 0; i < this.childMealList.length; i++) {
+            var currentCalorie = this.childMealList[i].calories;
+            total += currentCalorie;
+        }
+        return total;
+    };
     MealListComponent.prototype.onChange = function (optionFromMenu) {
         this.selectedCalorieness = optionFromMenu;
     };
