@@ -10,15 +10,13 @@
     <th>Meal Name</th>
     <th>About It</th>
     <th>Its Calories</th>
-    <th>Edit?</th>
   </tr>
 </thead>
 <tbody>
-  <tr *ngFor="let currentMeal of childMealList | calorieness:selectedCalorieness">
+  <tr (click)="editButtonHasBeenClicked(currentMeal)" *ngFor="let currentMeal of childMealList | calorieness:selectedCalorieness">
     <td>{{currentMeal.name}}</td>
     <td>{{currentMeal.description}}</td>
     <td>{{currentMeal.calories}}</td>
-    <td><button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button></td>
 </tr>
 <tr><td></td><td>Total Calories:</td>
   <td>{{getTotal()}}</td>
